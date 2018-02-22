@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a routerLink="/landing" class="navbar-brand" href="#">TechChoice</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" (click)="isCollapsed = !isCollapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
+    <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item dropdown" ngbDropdown>
+        <a routerLink="/home" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" ngbDropdownToggle>
+          Home
+        </a>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <a routerLink="/home/feed" routerLinkActive="active" class="dropdown-item">Feed</a>
+          <div class="dropdown-divider"></div>
+          <a routerLink="/home/discover" routerLinkActive="active" class="dropdown-item">Discover</a>
+          <div class="dropdown-divider"></div>
+          <a routerLink="/home/notifications" routerLinkActive="active" class="dropdown-item">Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" ngbDropdown>
+        <a routerLink="/profile" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" ngbDropdownToggle>
+          Profile
+        </a>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <a routerLink="/profile/user" routerLinkActive="active" class="dropdown-item">User</a>
+          <div class="dropdown-divider"></div>
+          <a routerLink="/profile/posts" routerLinkActive="active" class="dropdown-item">Posts</a>
+          <div class="dropdown-divider"></div>
+          <a routerLink="/profile/subscriptions" routerLinkActive="active" class="dropdown-item">Subscriptions</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/admin" class="nav-link disabled">Admin</a>
+      </li>
+    </ul>
+    <div class="btn-group my-2 my-lg-0">
+        <button routerLink="/authorize/login" type="button" class="btn btn-outline-success">Login</button>
+        <button routerLink="/authorize/register" type="button" class="btn btn-outline-secondary">Register</button>
+    </div>
+  </div>
+</nav>

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppNavbarComponent } from './app-navbar.component';
+import { NotificationsComponent } from './notifications.component';
 
-describe('AppNavbarComponent', () => {
-  let component: AppNavbarComponent;
-  let fixture: ComponentFixture<AppNavbarComponent>;
+describe('NotificationsComponent', () => {
+  let component: NotificationsComponent;
+  let fixture: ComponentFixture<NotificationsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppNavbarComponent ]
+      declarations: [ NotificationsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AppNavbarComponent);
+    fixture = TestBed.createComponent(NotificationsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
