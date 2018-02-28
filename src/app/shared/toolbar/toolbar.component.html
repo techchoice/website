@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <button mat-button [mat-menu-trigger-for]="navMenu" fxHide="false" fxHide.gt-sm>
+   <mat-icon>menu</mat-icon>
+  </button>
+  <button mat-button routerLink="/landing">
+    <mat-icon>build</mat-icon> 
+    {{title}}
+  </button>
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <button mat-button routerLink="/home">Home</button>
+    <button mat-button routerLink="/profile">Profile</button>
+  </div>
+  <span style="flex: 1 1 auto;"></span>
+  <button mat-button [mat-menu-trigger-for]="authMenu" fxHide="false" fxHide.gt-sm>
+    <mat-icon>lock</mat-icon>
+  </button>
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+      <button mat-button routerLink="/authorize/login">Login</button>
+      <button mat-button routerLink="/authorize/register">Register</button>
+    </div>
+</mat-toolbar>
+<mat-menu x-position="before" #navMenu="matMenu">
+  <button mat-menu-item routerLink="/home">Home</button>
+  <button mat-menu-item routerLink="/profile">Profile</button>
+</mat-menu>
+<mat-menu x-position="before" #authMenu="matMenu">
+    <button mat-menu-item routerLink="/authorize/login">Login</button>
+    <button mat-menu-item routerLink="/authorize/register">Register</button>
+</mat-menu>

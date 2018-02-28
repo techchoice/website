@@ -6,14 +6,18 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
+import { AuthorizeComponent } from './authorize.component';
 
+import { MatTabsModule, MatCardModule } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
-    AuthorizeRouting
+    AuthorizeRouting,
+    MatTabsModule,
+    MatCardModule
   ],
-  declarations: [LoginComponent, RegisterComponent],
+  declarations: [LoginComponent, RegisterComponent, AuthorizeComponent],
   providers: [AuthService, AuthGuard]
 })
 export class AuthorizeModule { }
